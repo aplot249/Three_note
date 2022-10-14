@@ -1,0 +1,216 @@
+{
+	"formatVersion": 1,
+	"appVersion": "0.55.1",
+	"files": [
+		{
+			"isClone": false,
+			"noteId": "QsiEAu2imDM3",
+			"notePath": [
+				"QsiEAu2imDM3"
+			],
+			"title": "Three_note",
+			"notePosition": 30,
+			"isExpanded": false,
+			"type": "text",
+			"mime": "text/html",
+			"attributes": [],
+			"format": "html",
+			"dirFileName": "Three_note",
+			"children": [
+				{
+					"isClone": false,
+					"noteId": "6hNontfNlzMo",
+					"notePath": [
+						"QsiEAu2imDM3",
+						"6hNontfNlzMo"
+					],
+					"title": "腾讯云ubuntu开启root登录",
+					"notePosition": 30,
+					"isExpanded": false,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [],
+					"format": "html",
+					"dataFileName": "腾讯云ubuntu开启root登录.html"
+				},
+				{
+					"isClone": false,
+					"noteId": "G7ryaP5ewfFE",
+					"notePath": [
+						"QsiEAu2imDM3",
+						"G7ryaP5ewfFE"
+					],
+					"title": "服务安装",
+					"notePosition": 70,
+					"isExpanded": true,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [],
+					"format": "html",
+					"dirFileName": "服务安装",
+					"children": [
+						{
+							"isClone": false,
+							"noteId": "bro7mWMCZQn5",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"G7ryaP5ewfFE",
+								"bro7mWMCZQn5"
+							],
+							"title": "ubuntu20安装服务",
+							"notePosition": 0,
+							"isExpanded": true,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "ubuntu20安装服务.html"
+						}
+					]
+				},
+				{
+					"isClone": false,
+					"noteId": "LmnnFcPrwBxt",
+					"notePath": [
+						"QsiEAu2imDM3",
+						"LmnnFcPrwBxt"
+					],
+					"title": "css",
+					"notePosition": 80,
+					"isExpanded": true,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [],
+					"format": "html",
+					"dirFileName": "css",
+					"children": [
+						{
+							"isClone": false,
+							"noteId": "mlaMIa8wvus4",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"LmnnFcPrwBxt",
+								"mlaMIa8wvus4"
+							],
+							"title": "css文档流、浮动",
+							"notePosition": 0,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "css文档流、浮动.html"
+						},
+						{
+							"isClone": false,
+							"noteId": "34yieemAK2Sd",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"LmnnFcPrwBxt",
+								"34yieemAK2Sd"
+							],
+							"title": "html的meta标签组成",
+							"notePosition": 10,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "html的meta标签组成.html"
+						}
+					]
+				},
+				{
+					"isClone": false,
+					"noteId": "JZV6gzt1cZku",
+					"notePath": [
+						"QsiEAu2imDM3",
+						"JZV6gzt1cZku"
+					],
+					"title": "js",
+					"notePosition": 90,
+					"isExpanded": false,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [],
+					"format": "html",
+					"dirFileName": "js",
+					"children": [
+						{
+							"isClone": false,
+							"noteId": "xN6PAs8641tu",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"JZV6gzt1cZku",
+								"xN6PAs8641tu"
+							],
+							"title": "base64加密和解密",
+							"notePosition": 0,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "8nwgH9OPxb4b",
+									"isInheritable": false,
+									"position": 1
+								}
+							],
+							"format": "html",
+							"dataFileName": "base64加密和解密.html",
+							"dirFileName": "base64加密和解密",
+							"children": [
+								{
+									"isClone": false,
+									"noteId": "8nwgH9OPxb4b",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"JZV6gzt1cZku",
+										"xN6PAs8641tu",
+										"8nwgH9OPxb4b"
+									],
+									"title": "20210927172910.png",
+									"notePosition": 10,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "20210927172910.png",
+											"isInheritable": false,
+											"position": 1000
+										},
+										{
+											"type": "label",
+											"name": "imageUrl",
+											"value": "https://aplot249.github.io/2021/09/27/base64%E7%9A%84%E5%8A%A0%E5%AF%86%E5%92%8C%E8%A7%A3%E5%AF%86%E8%BF%87%E7%A8%8B/20210927172910.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "20210927172910.png"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"noImport": true,
+			"dataFileName": "navigation.html"
+		},
+		{
+			"noImport": true,
+			"dataFileName": "index.html"
+		},
+		{
+			"noImport": true,
+			"dataFileName": "style.css"
+		}
+	]
+}
