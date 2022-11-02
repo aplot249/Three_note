@@ -12,14 +12,13 @@
 
     <p>1、github的地址: git@github.com:aplot249/anylink.git</p>
     <p>2、开启bbr和ipv4地址转发：</p>
-    <p style="margin-left:40px;"><span style="background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);"><code>echo net.core.default_qdisc=fq &gt;&gt; /etc/sysctl.conf&nbsp;</code></span>
+    <p style="margin-left:40px;"><span style="background-color:hsl(0,0%,100%);color:hsl(0,0%,0%);"><code>echo net.core.default_qdisc=fq &gt;&gt; /etc/sysctl.conf&nbsp;</code></span>
     </p>
-    <p style="margin-left:40px;"><span style="background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);"><code>echo net.ipv4.tcp_congestion_control=bbr &gt;&gt; /etc/sysctl.conf</code></span>
+    <p style="margin-left:40px;"><span style="background-color:hsl(0,0%,100%);color:hsl(0,0%,0%);"><code>echo net.ipv4.tcp_congestion_control=bbr &gt;&gt; /etc/sysctl.conf</code></span>
     </p>
-    <p style="margin-left:40px;"><span style="background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);"><code>echo net.ipv4.ip_forward = 1 </code></span>
-      <span
-      style="background-color:hsl(0,0%,100%);color:hsl(0,0%,0%);"><code>&gt;&gt; /etc/sysctl.conf</code>
-        </span>
+    <p style="margin-left:40px;"><span style="background-color:hsl(0,0%,100%);color:hsl(0,0%,0%);"><code>echo net.ipv4.ip_forward = 1 &gt;&gt; /etc/sysctl.conf</code></span>
+    </p>
+    <p style="margin-left:40px;"><span style="background-color:hsl(0,0%,100%);color:hsl(0,0%,0%);"><code>sysctl -p</code></span>
     </p>
     <p><span style="background-color:hsl(0,0%,100%);color:hsl(0,0%,0%);">3、设置nat路由转发：</span>
     </p>
@@ -27,8 +26,7 @@
     </p>
     <p style="margin-left:40px;"><span style="color:var(--color-prettylights-syntax-comment);"><code># 查看设置是否生效</code></span>
     </p>
-    <p style="margin-left:40px;"><code>
-iptables -nL -t nat</code>
+    <p style="margin-left:40px;"><code>iptables -nL -t nat</code>
     </p>
   </body>
 
