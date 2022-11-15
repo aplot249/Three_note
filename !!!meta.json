@@ -45,7 +45,7 @@
 					"title": "服务安装",
 					"notePosition": 70,
 					"prefix": null,
-					"isExpanded": false,
+					"isExpanded": true,
 					"type": "text",
 					"mime": "text/html",
 					"attributes": [],
@@ -3003,7 +3003,7 @@
 					"title": "计价学习",
 					"notePosition": 130,
 					"prefix": null,
-					"isExpanded": true,
+					"isExpanded": false,
 					"type": "text",
 					"mime": "text/html",
 					"attributes": [
