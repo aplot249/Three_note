@@ -45,7 +45,7 @@
 					"title": "服务安装",
 					"notePosition": 70,
 					"prefix": null,
-					"isExpanded": true,
+					"isExpanded": false,
 					"type": "text",
 					"mime": "text/html",
 					"attributes": [],
@@ -3768,6 +3768,224 @@
 								}
 							],
 							"dataFileName": "17_image.png"
+						}
+					]
+				},
+				{
+					"isClone": false,
+					"noteId": "8ljZEVh2OCcA",
+					"notePath": [
+						"QsiEAu2imDM3",
+						"8ljZEVh2OCcA"
+					],
+					"title": "劳务管理",
+					"notePosition": 140,
+					"prefix": null,
+					"isExpanded": true,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [],
+					"format": "html",
+					"dirFileName": "劳务管理",
+					"children": [
+						{
+							"isClone": false,
+							"noteId": "yebOWJA2wQCz",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"8ljZEVh2OCcA",
+								"yebOWJA2wQCz"
+							],
+							"title": "image.png",
+							"notePosition": 10,
+							"prefix": null,
+							"isExpanded": false,
+							"type": "image",
+							"mime": "image/jpg",
+							"attributes": [
+								{
+									"type": "label",
+									"name": "originalFileName",
+									"value": "image.png",
+									"isInheritable": false,
+									"position": 1000
+								}
+							],
+							"dataFileName": "image.png"
+						},
+						{
+							"isClone": false,
+							"noteId": "wsoBQcGL6SIu",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"8ljZEVh2OCcA",
+								"wsoBQcGL6SIu"
+							],
+							"title": "new note",
+							"notePosition": 20,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "9NcfriFDEXne",
+									"isInheritable": false,
+									"position": 2
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "yBPaATo7OFp3",
+									"isInheritable": false,
+									"position": 3
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "TD4jS7mIGEwl",
+									"isInheritable": false,
+									"position": 4
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "2lXguDDN9nXI",
+									"isInheritable": false,
+									"position": 5
+								}
+							],
+							"format": "html",
+							"dataFileName": "new note.html",
+							"dirFileName": "new note",
+							"children": [
+								{
+									"isClone": false,
+									"noteId": "MeG1VbWiVBvE",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"8ljZEVh2OCcA",
+										"wsoBQcGL6SIu",
+										"MeG1VbWiVBvE"
+									],
+									"title": "image.png",
+									"notePosition": 10,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "9NcfriFDEXne",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"8ljZEVh2OCcA",
+										"wsoBQcGL6SIu",
+										"9NcfriFDEXne"
+									],
+									"title": "image.png",
+									"notePosition": 20,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "1_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "yBPaATo7OFp3",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"8ljZEVh2OCcA",
+										"wsoBQcGL6SIu",
+										"yBPaATo7OFp3"
+									],
+									"title": "image.png",
+									"notePosition": 30,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/png",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "2_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "TD4jS7mIGEwl",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"8ljZEVh2OCcA",
+										"wsoBQcGL6SIu",
+										"TD4jS7mIGEwl"
+									],
+									"title": "image.png",
+									"notePosition": 40,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "3_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "2lXguDDN9nXI",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"8ljZEVh2OCcA",
+										"wsoBQcGL6SIu",
+										"2lXguDDN9nXI"
+									],
+									"title": "image.png",
+									"notePosition": 50,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "4_image.png"
+								}
+							]
 						}
 					]
 				}
