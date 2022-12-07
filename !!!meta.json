@@ -3003,7 +3003,7 @@
 					"title": "计价学习",
 					"notePosition": 130,
 					"prefix": null,
-					"isExpanded": false,
+					"isExpanded": true,
 					"type": "text",
 					"mime": "text/html",
 					"attributes": [
@@ -3768,6 +3768,23 @@
 								}
 							],
 							"dataFileName": "17_image.png"
+						},
+						{
+							"isClone": false,
+							"noteId": "naBjRM73T80v",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"MVxlKU1ynV5m",
+								"naBjRM73T80v"
+							],
+							"title": "提农工工资单子",
+							"notePosition": 240,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "提农工工资单子.html"
 						}
 					]
 				},
@@ -3781,7 +3798,7 @@
 					"title": "劳务管理",
 					"notePosition": 140,
 					"prefix": null,
-					"isExpanded": true,
+					"isExpanded": false,
 					"type": "text",
 					"mime": "text/html",
 					"attributes": [],
@@ -3823,6 +3840,7 @@
 							],
 							"title": "new note",
 							"notePosition": 20,
+							"prefix": null,
 							"isExpanded": false,
 							"type": "text",
 							"mime": "text/html",
@@ -3871,6 +3889,7 @@
 									],
 									"title": "image.png",
 									"notePosition": 10,
+									"prefix": null,
 									"isExpanded": false,
 									"type": "image",
 									"mime": "image/jpg",
@@ -3896,6 +3915,7 @@
 									],
 									"title": "image.png",
 									"notePosition": 20,
+									"prefix": null,
 									"isExpanded": false,
 									"type": "image",
 									"mime": "image/jpg",
@@ -3921,6 +3941,7 @@
 									],
 									"title": "image.png",
 									"notePosition": 30,
+									"prefix": null,
 									"isExpanded": false,
 									"type": "image",
 									"mime": "image/png",
@@ -3946,6 +3967,7 @@
 									],
 									"title": "image.png",
 									"notePosition": 40,
+									"prefix": null,
 									"isExpanded": false,
 									"type": "image",
 									"mime": "image/jpg",
@@ -3971,6 +3993,7 @@
 									],
 									"title": "image.png",
 									"notePosition": 50,
+									"prefix": null,
 									"isExpanded": false,
 									"type": "image",
 									"mime": "image/jpg",

@@ -27,6 +27,8 @@
     </figure>
     <p><strong>ubuntu 下的 nginx 配置文件，一旦新增就要软链接到site-enabled文件夹下，否则不起作用，这点容易武略。</strong>
     </p>
+    <p><strong>修改玩配置文件之后，一定要nginx -t 检测一下，因为可能会写错，但是写错了也不影响 现有运行中的worker。这个错误极不容易被发现。</strong>
+    </p>
   </body>
 
 </html>
