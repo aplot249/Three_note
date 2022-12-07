@@ -3777,14 +3777,31 @@
 								"MVxlKU1ynV5m",
 								"naBjRM73T80v"
 							],
-							"title": "提民工工资单子",
+							"title": "提农民工工资单子",
 							"notePosition": 240,
 							"isExpanded": false,
 							"type": "text",
 							"mime": "text/html",
 							"attributes": [],
 							"format": "html",
-							"dataFileName": "提民工工资单子.html"
+							"dataFileName": "提农民工工资单子.html"
+						},
+						{
+							"isClone": false,
+							"noteId": "MfyMZRDGqneI",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"MVxlKU1ynV5m",
+								"MfyMZRDGqneI"
+							],
+							"title": "提发票确认单",
+							"notePosition": 250,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "提发票确认单.html"
 						}
 					]
 				},
