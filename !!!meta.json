@@ -4215,6 +4215,59 @@
 							"attributes": [],
 							"format": "html",
 							"dataFileName": "项目部外聘人员-阳光华晨人力.html"
+						},
+						{
+							"isClone": false,
+							"noteId": "4hdUh3KsomqK",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"MVxlKU1ynV5m",
+								"4hdUh3KsomqK"
+							],
+							"title": "机械验工",
+							"notePosition": 280,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "pG8lrCFxSK0I",
+									"isInheritable": false,
+									"position": 2
+								}
+							],
+							"format": "html",
+							"dataFileName": "机械验工.html",
+							"dirFileName": "机械验工",
+							"children": [
+								{
+									"isClone": false,
+									"noteId": "pG8lrCFxSK0I",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"MVxlKU1ynV5m",
+										"4hdUh3KsomqK",
+										"pG8lrCFxSK0I"
+									],
+									"title": "image.png",
+									"notePosition": 10,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/png",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "image.png"
+								}
+							]
 						}
 					]
 				},
