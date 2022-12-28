@@ -11,7 +11,7 @@
 			"title": "我的笔记",
 			"notePosition": 30,
 			"prefix": null,
-			"isExpanded": true,
+			"isExpanded": false,
 			"type": "text",
 			"mime": "text/html",
 			"attributes": [],
@@ -42,15 +42,15 @@
 						"QsiEAu2imDM3",
 						"G7ryaP5ewfFE"
 					],
-					"title": "服务安装",
+					"title": "笔记",
 					"notePosition": 70,
 					"prefix": null,
-					"isExpanded": false,
+					"isExpanded": true,
 					"type": "text",
 					"mime": "text/html",
 					"attributes": [],
 					"format": "html",
-					"dirFileName": "服务安装",
+					"dirFileName": "笔记",
 					"children": [
 						{
 							"isClone": false,
@@ -2802,6 +2802,347 @@
 									"dataFileName": "49_image.jpg"
 								}
 							]
+						},
+						{
+							"isClone": false,
+							"noteId": "iiGwZRWmxXnV",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"G7ryaP5ewfFE",
+								"iiGwZRWmxXnV"
+							],
+							"title": "docker",
+							"notePosition": 60,
+							"prefix": null,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "0Jkstqf6vg2V",
+									"isInheritable": false,
+									"position": 1
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "nNoIhct5qmu7",
+									"isInheritable": false,
+									"position": 2
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "SsEDB5d2wEcv",
+									"isInheritable": false,
+									"position": 3
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "JHcN7CMLuPPC",
+									"isInheritable": false,
+									"position": 4
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "TngcpbUuoT2H",
+									"isInheritable": false,
+									"position": 5
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "WhWgB7gKVfYp",
+									"isInheritable": false,
+									"position": 6
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "qEA85eMziK4V",
+									"isInheritable": false,
+									"position": 7
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "UA87sFelx4Yz",
+									"isInheritable": false,
+									"position": 8
+								}
+							],
+							"format": "html",
+							"dataFileName": "docker.html",
+							"dirFileName": "docker",
+							"children": [
+								{
+									"isClone": false,
+									"noteId": "0Jkstqf6vg2V",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"0Jkstqf6vg2V"
+									],
+									"title": "image.png",
+									"notePosition": 10,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "nNoIhct5qmu7",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"nNoIhct5qmu7"
+									],
+									"title": "image.png",
+									"notePosition": 20,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "1_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "SsEDB5d2wEcv",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"SsEDB5d2wEcv"
+									],
+									"title": "image.png",
+									"notePosition": 30,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "2_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "JHcN7CMLuPPC",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"JHcN7CMLuPPC"
+									],
+									"title": "image.png",
+									"notePosition": 40,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "3_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "TngcpbUuoT2H",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"TngcpbUuoT2H"
+									],
+									"title": "image.png",
+									"notePosition": 50,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "4_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "WhWgB7gKVfYp",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"WhWgB7gKVfYp"
+									],
+									"title": "image.png",
+									"notePosition": 60,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "5_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "qEA85eMziK4V",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"qEA85eMziK4V"
+									],
+									"title": "image.png",
+									"notePosition": 70,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "6_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "UA87sFelx4Yz",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"UA87sFelx4Yz"
+									],
+									"title": "image.png",
+									"notePosition": 80,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/jpg",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "7_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "4ztZwVxULaEj",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"iiGwZRWmxXnV",
+										"4ztZwVxULaEj"
+									],
+									"title": "docker  给运行中的容器增加端口",
+									"notePosition": 90,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "text",
+									"mime": "text/html",
+									"attributes": [],
+									"format": "html",
+									"dataFileName": "docker  给运行中的容器增加端口.html"
+								}
+							]
+						},
+						{
+							"isClone": false,
+							"noteId": "TeJ7MTxof4RN",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"G7ryaP5ewfFE",
+								"TeJ7MTxof4RN"
+							],
+							"title": "ubuntu20.04 LTS版本的DNS",
+							"notePosition": 70,
+							"prefix": null,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "ubuntu20.04 LTS版本的DNS.html"
+						},
+						{
+							"isClone": false,
+							"noteId": "gSY2GyQQmp9Y",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"G7ryaP5ewfFE",
+								"gSY2GyQQmp9Y"
+							],
+							"title": "MariaDB重置账号密码",
+							"notePosition": 80,
+							"prefix": null,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "MariaDB重置账号密码.html"
 						}
 					]
 				},
@@ -3003,7 +3344,7 @@
 					"title": "计价学习",
 					"notePosition": 130,
 					"prefix": null,
-					"isExpanded": true,
+					"isExpanded": false,
 					"type": "text",
 					"mime": "text/html",
 					"attributes": [
@@ -4226,6 +4567,7 @@
 							],
 							"title": "机械验工",
 							"notePosition": 280,
+							"prefix": null,
 							"isExpanded": false,
 							"type": "text",
 							"mime": "text/html",
@@ -4253,6 +4595,7 @@
 									],
 									"title": "image.png",
 									"notePosition": 10,
+									"prefix": null,
 									"isExpanded": false,
 									"type": "image",
 									"mime": "image/png",
@@ -4268,6 +4611,24 @@
 									"dataFileName": "image.png"
 								}
 							]
+						},
+						{
+							"isClone": false,
+							"noteId": "IK1Ak6zRKcBY",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"MVxlKU1ynV5m",
+								"IK1Ak6zRKcBY"
+							],
+							"title": "劳务打卡宝",
+							"notePosition": 290,
+							"prefix": null,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "劳务打卡宝.html"
 						}
 					]
 				},
