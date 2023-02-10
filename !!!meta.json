@@ -3143,6 +3143,24 @@
 							"attributes": [],
 							"format": "html",
 							"dataFileName": "MariaDB重置账号密码.html"
+						},
+						{
+							"isClone": false,
+							"noteId": "dtae4p4NvZpN",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"G7ryaP5ewfFE",
+								"dtae4p4NvZpN"
+							],
+							"title": "anylink本地开发环境",
+							"notePosition": 90,
+							"prefix": null,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "anylink本地开发环境.html"
 						}
 					]
 				},
@@ -4547,15 +4565,85 @@
 								"MVxlKU1ynV5m",
 								"EH27xRsiDJns"
 							],
-							"title": "项目部外聘人员-阳光华晨人力",
+							"title": "项目部外聘人员-阳光华晨【分包结算单】",
 							"notePosition": 270,
 							"prefix": null,
 							"isExpanded": false,
 							"type": "text",
 							"mime": "text/html",
-							"attributes": [],
+							"attributes": [
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "BUFJC6gS06W2",
+									"isInheritable": false,
+									"position": 1
+								},
+								{
+									"type": "relation",
+									"name": "imageLink",
+									"value": "SHEHPlvasWFY",
+									"isInheritable": false,
+									"position": 2
+								}
+							],
 							"format": "html",
-							"dataFileName": "项目部外聘人员-阳光华晨人力.html"
+							"dataFileName": "项目部外聘人员-阳光华晨【分包结算单】.html",
+							"dirFileName": "项目部外聘人员-阳光华晨【分包结算单】",
+							"children": [
+								{
+									"isClone": false,
+									"noteId": "BUFJC6gS06W2",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"MVxlKU1ynV5m",
+										"EH27xRsiDJns",
+										"BUFJC6gS06W2"
+									],
+									"title": "image.png",
+									"notePosition": 10,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/png",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "SHEHPlvasWFY",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"MVxlKU1ynV5m",
+										"EH27xRsiDJns",
+										"SHEHPlvasWFY"
+									],
+									"title": "image.png",
+									"notePosition": 20,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "image",
+									"mime": "image/png",
+									"attributes": [
+										{
+											"type": "label",
+											"name": "originalFileName",
+											"value": "image.png",
+											"isInheritable": false,
+											"position": 1000
+										}
+									],
+									"dataFileName": "1_image.png"
+								}
+							]
 						},
 						{
 							"isClone": false,
@@ -4629,6 +4717,24 @@
 							"attributes": [],
 							"format": "html",
 							"dataFileName": "劳务打卡宝.html"
+						},
+						{
+							"isClone": false,
+							"noteId": "64QakU3dkSrw",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"MVxlKU1ynV5m",
+								"64QakU3dkSrw"
+							],
+							"title": "外协队伍的分包结算【每月的验工计价】",
+							"notePosition": 300,
+							"prefix": null,
+							"isExpanded": false,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dataFileName": "外协队伍的分包结算【每月的验工计价】.html"
 						}
 					]
 				},
