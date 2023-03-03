@@ -11,7 +11,7 @@
 			"title": "我的笔记",
 			"notePosition": 30,
 			"prefix": null,
-			"isExpanded": false,
+			"isExpanded": true,
 			"type": "text",
 			"mime": "text/html",
 			"attributes": [],
@@ -3161,6 +3161,61 @@
 							"attributes": [],
 							"format": "html",
 							"dataFileName": "anylink本地开发环境.html"
+						},
+						{
+							"isClone": false,
+							"noteId": "sIYDI7xO3Jw9",
+							"notePath": [
+								"QsiEAu2imDM3",
+								"G7ryaP5ewfFE",
+								"sIYDI7xO3Jw9"
+							],
+							"title": "django",
+							"notePosition": 100,
+							"isExpanded": true,
+							"type": "text",
+							"mime": "text/html",
+							"attributes": [],
+							"format": "html",
+							"dirFileName": "1_django",
+							"children": [
+								{
+									"isClone": false,
+									"noteId": "UPaBhwfqYMIo",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"sIYDI7xO3Jw9",
+										"UPaBhwfqYMIo"
+									],
+									"title": "admin字段设置大全 ",
+									"notePosition": 10,
+									"isExpanded": false,
+									"type": "text",
+									"mime": "text/html",
+									"attributes": [],
+									"format": "html",
+									"dataFileName": "admin字段设置大全.html"
+								},
+								{
+									"isClone": false,
+									"noteId": "5Xq1XhfygDi3",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"sIYDI7xO3Jw9",
+										"5Xq1XhfygDi3"
+									],
+									"title": "隐藏用户编辑中的某些字段",
+									"notePosition": 20,
+									"isExpanded": false,
+									"type": "text",
+									"mime": "text/html",
+									"attributes": [],
+									"format": "html",
+									"dataFileName": "隐藏用户编辑中的某些字段.html"
+								}
+							]
 						}
 					]
 				},

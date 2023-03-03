@@ -1,0 +1,182 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body class="ck-content">
+     <h1>admin字段设置大全 </h1>
+
+    <p style="margin-left:0px;"><code># 在列表页显示的字段,默认会显示所有字段,有对应的方法可以重写</code>
+    </p>
+    <p style="margin-left:0px;"><code>list_display&nbsp;=</code>&nbsp;<code>('__str__',)</code>
+    </p>
+    <p style="margin-left:0px;"><code># 在列表页显示的字段中,可以链接到change_form页面的字段</code>
+    </p>
+    <p style="margin-left:0px;"><code>list_display_links&nbsp;=</code>&nbsp;<code>()</code>
+    </p>
+    <p style="margin-left:0px;"><code># 右侧的筛选,必须是字段,可以继承自SimpleListFilter来自定义筛选字段和规则,SimpleListFilter的方法在后面详细介绍</code>
+    </p>
+    <p style="margin-left:0px;"><code>list_filter&nbsp;=</code>&nbsp;<code>()</code>
+    </p>
+    <p style="margin-left:0px;"><code># 联表查询是否自动查询,可以是布尔,列表或元组,如果是列表或元组,则级联查询指定的字段</code>
+    </p>
+    <p style="margin-left:0px;"><code>list_select_related&nbsp;=</code>&nbsp;<code>False</code>
+    </p>
+    <p style="margin-left:0px;"><code># 列表页每页展示的条数</code>
+    </p>
+    <p style="margin-left:0px;"><code>list_per_page&nbsp;=</code>&nbsp;<code>100</code>
+    </p>
+    <p style="margin-left:0px;"><code># 分页,显示全部,真是数据小于该值时才会显示全部</code>
+    </p>
+    <p style="margin-left:0px;"><code>list_max_show_all&nbsp;=</code>&nbsp;<code>200</code>
+    </p>
+    <p style="margin-left:0px;"><code># 在列表页可以编辑的字段</code>
+    </p>
+    <p style="margin-left:0px;"><code>list_editable&nbsp;=</code>&nbsp;<code>()</code>
+    </p>
+    <p style="margin-left:0px;"><code># 在列表页可以模糊搜索的字段</code>
+    </p>
+    <p style="margin-left:0px;"><code>search_fields&nbsp;=</code>&nbsp;<code>()</code>
+    </p>
+    <p style="margin-left:0px;"><code># 对Date和DateTime类型进行搜索</code>
+    </p>
+    <p style="margin-left:0px;"><code>date_hierarchy&nbsp;=</code>&nbsp;<code>None</code>
+    </p>
+    <p style="margin-left:0px;"><code># 在change_form页面,按钮为,save按钮的值(save as new和save add another)</code>
+    </p>
+    <p style="margin-left:0px;"><code>save_as&nbsp;=</code>&nbsp;<code>False</code>
+    </p>
+    <p style="margin-left:0px;"><code># 点击保存并继续编辑</code>
+    </p>
+    <p style="margin-left:0px;"><code>save_as_continue&nbsp;=</code>&nbsp;<code>True</code>
+    </p>
+    <p style="margin-left:0px;"><code># save按钮的位置,是True则显示在页面上方</code>
+    </p>
+    <p style="margin-left:0px;"><code>save_on_top&nbsp;=</code>&nbsp;<code>False</code>
+    </p>
+    <p style="margin-left:0px;"><code># 自定义分页类</code>
+    </p>
+    <p style="margin-left:0px;"><code>paginator&nbsp;=</code>&nbsp;<code>Paginator</code>
+    </p>
+    <p style="margin-left:0px;"><code># 详细页面，删除、修改，更新后跳转回列表后，是否保留原搜索条件管理员现在在创建，编辑或删除对象后保留列表视图中的过滤器。</code>
+    </p>
+    <p style="margin-left:0px;"><code># 可以将此属性设置为False，以恢复之前清除过滤器的行为。</code>
+    </p>
+    <p style="margin-left:0px;"><code>preserve_filters&nbsp;=</code>&nbsp;<code>True</code>
+    </p>
+    <p style="margin-left:0px;"><code># 在详情页面,如果有FK到其他表,在详情页中可以动态的填加或删除级联数据</code>
+    </p>
+    <p style="margin-left:0px;"><code>inlines&nbsp;=</code>&nbsp;<code>[]</code>
+    </p>
+    <p style="margin-left:0px;"><code>admin中action操作的设置</code>
+    </p>
+    <p style="margin-left:0px;"><code>admin中的action是指在列表页的动作,默认为删除所选的条目,可以自定义填加动作,将动作注册到action中,需要是一个方法</code>
+    </p>
+    <p style="margin-left:0px;"><code># 定制action中的操作</code>
+    </p>
+    <p style="margin-left:0px;"><code>actions&nbsp;=</code>&nbsp;<code>[]</code>
+    </p>
+    <p style="margin-left:0px;"><code>action_form&nbsp;=</code>&nbsp;<code>helpers.ActionForm</code>
+    </p>
+    <p style="margin-left:0px;"><code># action选项显示的位置,页面上方或者页面下方</code>
+    </p>
+    <p style="margin-left:0px;"><code>actions_on_top&nbsp;=</code>&nbsp;<code>True</code>
+    </p>
+    <p style="margin-left:0px;"><code>actions_on_bottom&nbsp;=</code>&nbsp;<code>False</code>
+    </p>
+    <p style="margin-left:0px;"><code># 是否显示action选择的个数</code>
+    </p>
+    <p style="margin-left:0px;"><code>actions_selection_counter&nbsp;=</code>&nbsp;<code>True</code>
+    </p>
+    <p style="margin-left:0px;"><code>checks_class&nbsp;=</code>&nbsp;<code>ModelAdminChecks</code>
+    </p>
+    <p style="margin-left:0px;"><code>BaseModelAdmin中的属性</code>
+    </p>
+    <p style="margin-left:0px;"><code>除了ModelAdmin中的属性,也可以自定义在其父类BaseModelAdmin中的属性和方法,是一些通用的,在继承子BaseModelAdmin的类中也可以完成的属性设置.一般是详情页的属性.</code>
+    </p>
+    <p style="margin-left:0px;"><code># 自动补全,外键查询数据多时,方便查找</code>
+    </p>
+    <p style="margin-left:0px;"><code>autocomplete_fields&nbsp;=</code>&nbsp;<code>()</code>
+    </p>
+    <p style="margin-left:0px;"><code># 详情页,针对外键和M2M字段变成input框形式</code>
+    </p>
+    <p style="margin-left:0px;"><code>raw_id_fields&nbsp;=</code>&nbsp;<code>()</code>
+    </p>
+    <p style="margin-left:0px;"><code># 详情页面展示的字段</code>
+    </p>
+    <p style="margin-left:0px;"><code>fields&nbsp;=</code>&nbsp;<code>None</code>
+    </p>
+    <p style="margin-left:0px;"><code># 详情页面排除的字段,字段可以是数据库中的也可以是自定义的</code>
+    </p>
+    <p style="margin-left:0px;"><code>exclude&nbsp;=</code>&nbsp;<code>None</code>
+    </p>
+    <p style="margin-left:0px;"><code># 在详情页面对数据进行分隔显示,对应到admin模板中的'fieldsets.html'</code>
+    </p>
+    <p style="margin-left:0px;"><code>fieldsets&nbsp;=</code>&nbsp;<code>None</code>
+    </p>
+    <p style="margin-left:0px;"><code># 为详情页指定form表单,可以自定义显示的数据,字段</code>
+    </p>
+    <p style="margin-left:0px;"><code>form&nbsp;=</code>&nbsp;<code>forms.ModelForm</code>
+    </p>
+    <p style="margin-left:0px;"><code># 下面两个是M2M显示时,数据移动选择.可以参考admin中用户的权限操作</code>
+    </p>
+    <p style="margin-left:0px;"><code>filter_vertical&nbsp;=</code>&nbsp;<code>()&nbsp;# 纵向展示</code>
+    </p>
+    <p style="margin-left:0px;"><code>filter_horizontal&nbsp;=</code>&nbsp;<code>()&nbsp;# 横向展示</code>
+    </p>
+    <p style="margin-left:0px;"><code># 详情页面使用radio显示选项,FK默认使用select</code>
+    </p>
+    <p style="margin-left:0px;"><code>radio_fields&nbsp;=</code>&nbsp;<code>{}</code>
+    </p>
+    <p style="margin-left:0px;"><code># 填加页面,在某字段输入值后,自动填加到指定字段</code>
+    </p>
+    <p style="margin-left:0px;"><code># prepopulated_fields = {"email": ("user",)},email字段会在用户填加user字段时自动填充</code>
+    </p>
+    <p style="margin-left:0px;"><code>prepopulated_fields&nbsp;=</code>&nbsp;<code>{}</code>
+    </p>
+    <p style="margin-left:0px;"><code># 详情页指定显示的插件,后面详细说明</code>
+    </p>
+    <p style="margin-left:0px;"><code>formfield_overrides&nbsp;=</code>&nbsp;<code>{}</code>
+    </p>
+    <p style="margin-left:0px;"><code># 详情页面的只读字段</code>
+    </p>
+    <p style="margin-left:0px;"><code>readonly_fields&nbsp;=</code>&nbsp;<code>()</code>
+    </p>
+    <p style="margin-left:0px;"><code># 详情页面排序规则</code>
+    </p>
+    <p style="margin-left:0px;"><code>ordering&nbsp;=</code>&nbsp;<code>None</code>
+    </p>
+    <p style="margin-left:0px;"><code># 禁止某些排序,为空则禁止所有的排序</code>
+    </p>
+    <p style="margin-left:0px;"><code>sortable_by&nbsp;=</code>&nbsp;<code>None</code>
+    </p>
+    <p style="margin-left:0px;"><code># 编辑时是否在页面上显示view on set,可以通过方法来返回一个链接,后面说明</code>
+    </p>
+    <p style="margin-left:0px;"><code>view_on_site&nbsp;=</code>&nbsp;<code>True</code>
+    </p>
+    <p style="margin-left:0px;"><code># 列表页,模糊搜索后面显示的数据个数样式</code>
+    </p>
+    <p style="margin-left:0px;"><code># 为True是显示条数,为False时显示全部</code>
+    </p>
+    <p style="margin-left:0px;"><code>show_full_result_count&nbsp;=</code>&nbsp;<code>True</code>
+    </p>
+    <p style="margin-left:0px;"><code>checks_class&nbsp;=</code>&nbsp;<code>BaseModelAdminChecks</code>
+    </p>
+    <p><code>ModelAdmin</code><span style="background-color:rgb(255,255,255);color:rgb(33,37,41);"> 类的</span><code>exclude</code>
+      <span
+      style="background-color:rgb(255,255,255);color:rgb(33,37,41);">属性可用于隐藏字段。</span>
+    </p>
+    <p><span style="background-color:rgb(255,255,255);color:rgb(33,37,41);">在 </span><code>get_form</code>
+      <span
+      style="background-color:rgb(255,255,255);color:rgb(33,37,41);">中使用</span><code>exclude</code><span style="background-color:rgb(255,255,255);color:rgb(33,37,41);"> 属性，您可以在其中访问 </span><code>request</code>
+        <span
+        style="background-color:rgb(255,255,255);color:rgb(33,37,41);">变量，并且可以根据用户的权限或组将其设置为动态。</span>
+    </p>
+    <p style="margin-left:0px;">&nbsp;</p>
+  </body>
+
+</html>
