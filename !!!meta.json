@@ -81,12 +81,33 @@
 							"title": "magento2 ",
 							"notePosition": 10,
 							"prefix": null,
-							"isExpanded": false,
+							"isExpanded": true,
 							"type": "text",
 							"mime": "text/html",
 							"attributes": [],
 							"format": "html",
-							"dataFileName": "magento2.html"
+							"dataFileName": "magento2.html",
+							"dirFileName": "magento2",
+							"children": [
+								{
+									"isClone": false,
+									"noteId": "ScNrJFvwivJk",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"yRuOeNofO5PN",
+										"ScNrJFvwivJk"
+									],
+									"title": "magento 在ubuntu的 nginx 配置",
+									"notePosition": 10,
+									"isExpanded": false,
+									"type": "text",
+									"mime": "text/html",
+									"attributes": [],
+									"format": "html",
+									"dataFileName": "magento 在ubuntu的 nginx 配置.html"
+								}
+							]
 						},
 						{
 							"isClone": false,
@@ -316,6 +337,25 @@
 										}
 									],
 									"dataFileName": "5_image.png"
+								},
+								{
+									"isClone": false,
+									"noteId": "0Al25F8rzji7",
+									"notePath": [
+										"QsiEAu2imDM3",
+										"G7ryaP5ewfFE",
+										"tE5kyUGvfjzL",
+										"0Al25F8rzji7"
+									],
+									"title": "new note",
+									"notePosition": 70,
+									"prefix": null,
+									"isExpanded": false,
+									"type": "text",
+									"mime": "text/html",
+									"attributes": [],
+									"format": "html",
+									"dataFileName": "new note.html"
 								}
 							]
 						},
@@ -3172,7 +3212,8 @@
 							],
 							"title": "django",
 							"notePosition": 100,
-							"isExpanded": true,
+							"prefix": null,
+							"isExpanded": false,
 							"type": "text",
 							"mime": "text/html",
 							"attributes": [],
@@ -3190,6 +3231,7 @@
 									],
 									"title": "admin字段设置大全 ",
 									"notePosition": 10,
+									"prefix": null,
 									"isExpanded": false,
 									"type": "text",
 									"mime": "text/html",
@@ -3208,6 +3250,7 @@
 									],
 									"title": "隐藏用户编辑中的某些字段",
 									"notePosition": 20,
+									"prefix": null,
 									"isExpanded": false,
 									"type": "text",
 									"mime": "text/html",
