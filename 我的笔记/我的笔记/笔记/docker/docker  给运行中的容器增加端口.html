@@ -1,0 +1,22 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body class="ck-content">
+     <h1>docker  给运行中的容器增加端口</h1>
+
+    <p>1、首先先关闭 运行中的容器 &nbsp;docker stop &nbsp; 容器ID</p>
+    <p>2、然后 关闭docker 服务 systemctl stop docker</p>
+    <p>3、 然后去 &nbsp;/var/lib/docker/容器ID/hostconfig.conf 文件，修改PortBindings。修改为
+      "PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"88"}]}</p>
+    <p>表示 宿主机的88端口指向docker容器的80端口，</p>
+    <p>同时修改 config.v2.json &nbsp; "ExposedPorts":{"80/tcp":{}} 表示暴露容器的80端口。</p>
+    <p>&nbsp;</p>
+  </body>
+
+</html>

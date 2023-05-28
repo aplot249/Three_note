@@ -1,0 +1,213 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body class="ck-content">
+     <h1>django中日期时间</h1>
+
+    
+<h3 style="margin-left:0px;"><a href="https://so.csdn.net/so/search?q=Django&amp;spm=1001.2101.3001.7020"><strong>Django</strong></a><strong>出现的时间问题：</strong></h3>
+    <p style="margin-left:0px;">不同时区的人所在的时间是不同的，如果都采用当地时间，那么导致数据库存储的时间，并不是同一时刻的时间。但如果都采用0时区时间，那么不在0时区的用户就会看到错误的时间，怎么做呢？</p>
+    <p
+    style="margin-left:0px;">解决方案： 在代码和数据库中都采用UTC时间(0时区时间)，在和用户交互的时候采用当地时间。</p>
+      <p>二：Django如何开启时区支持？
+        <br>1: 在配置文件中配置：</p>
+      <p>USE_TZ = True
+        <br>1
+        <br>2： 配置文件指定自己所在的时区（不指定默认是0时区）</p>
+      <p>LANGUAGE_CODE = 'zh-hans' # 语言：简体中文</p>
+      <p>TIME_ZONE = 'Asia/Shanghai' # 亚洲上海
+        <br>
+        <br>3： 安装pytz模块：(时区转换专用模块)</p>
+      <p>pip install pytz -i https://pypi.tuna.tsinghua.edu.cn/simple
+        <br>1
+        <br>三：USe_TZ = True的效应：
+        <br>作用一：前端传递过来的DateFiled类型，经过模型类，存到数据库中，全部是0时区时间。
+        <br>作用二： 后端自己写的代码，只要是使用timezone获取的时间（已知的时间）（带时区的时间），django会自己转换，无需我们手动转换。
+        <br>作用三：模板显示问题：django模板，会将数据库中0时区的时间转换成当地时间，无需我们自己转换。
+        <br>总结：</p>
+      <p>1：django中推荐使用USE_TZ = True，让数据库存储0时区时间。
+        <br>2：django后端使用timezone获取当地时间，不使用原生的datetime。
+        <br>3：django模板无需考虑时区问题，django将自动转换。
+        <br>4：USE_TZ = True，和 TIME_ZONE = ‘Asia/Shanghai’ # 亚洲上海必须设置。</p>
+      <p>四： 了解django的配置文件：
+        <br>1：如果在没有django项目的情况下，django使用的自己的配置文件。</p>
+      <p>python3.5.2/site_packages/django/conf/global_settings
+        <br>在django项目的依赖包中寻找到。</p>
+      <p>2： django项目下，django启动的是</p>
+      <p>项目中的settings文件</p>
+      <p>五：区分两类datetime对象
+        <br>1： 时区关闭时，django使用原生的datetime对象保存本地时间。
+        <br>2： 时区开启时，django使用已知的datetime对象保存本地时间。</p>
+      <p>验证：时区关闭时：django使用的timezone。
+        <br>注意：此时使用的是global_settings配置文件，不存在USE_TZ = True这个配置项。</p>
+      <p>python@ubuntu:~$ workon django_env
+        <br>(django_env) python@ubuntu:~$ python3
+        <br>&gt;&gt;&gt; from django.conf import settings&nbsp;
+        <br>&gt;&gt;&gt; settings.configure()
+        <br>&gt;&gt;&gt; from django.utils import timezone
+        <br>&gt;&gt;&gt; now = timezone.now()
+        <br>&gt;&gt;&gt; now
+        <br>datetime.datetime(2020, 10, 27, 21, 34, 48, 517250)
+        <br>
+        <br>结论：当关闭时区时，django 使用原生的 datetime 对象保存本地时间。</p>
+      <p>验证：时区开启时：django使用的timezone。
+        <br>注意：此时我们进入django项目中使用python3 manager.py shell进入django环境：</p>
+      <p>(django_env) python@ubuntu:~/Desktop/shopping-mall-project/shopping_mall$
+        python3 manage.py shell
+        <br>&gt;&gt;&gt; from django.utils import timezone
+        <br>&gt;&gt;&gt; now = timezone.now()
+        <br>&gt;&gt;&gt; now
+        <br>datetime.datetime(2020, 10, 27, 13, 40, 35, 544740, tzinfo=&lt;UTC&gt;)
+        <br>&gt;&gt;&gt; new = timezone.localtime()
+        <br>&gt;&gt;&gt; new
+        <br>datetime.datetime(2020, 10, 28, 8, 24, 1, 906910, tzinfo=&lt;DstTzInfo
+        'Asia/Shanghai' CST+8:00:00 STD&gt;)
+        <br>
+        <br>结论： 时区开启时，django使用已知的datetime对象保存本地时间。使用localtime获取的是本地东八区的时间。(注意：，TIME_ZONE
+        = ‘Asia/Shanghai’， 这个配置项必须存在才可以)。
+        <br>&nbsp;</p>
+      <p>六：datetime模块中的5类
+        <br>date类： 日期对象(年，月，日)
+        <br>time类：时间对象（时，分， 秒，微秒）
+        <br>datetime类：日期时间对象 （年，月，日，时，分，秒，微秒）
+        <br>timedelta类：时间间隔对象
+        <br>tzinfo类：时区信息对象。
+        <br>七： datetime的常见用法：
+        <br>注意： 由于timezone返回的对象也是datetime对象，所以方法同样试用。</p>
+      <p>1: 获取当地是时间（年，月，日，时，分，秒，微秒）:
+        <br>&gt;&gt;&gt; datetime.datetime.now()
+        <br>datetime.datetime(2020, 10, 28, 8, 34, 56, 588940)
+        <br>
+        <br>&gt;&gt;&gt; today = datetime.datetime.today()
+        <br>&gt;&gt;&gt; today
+        <br>datetime.datetime(2020, 10, 28, 8, 50, 34, 43761)
+        <br>
+        <br>2：将时间转换成（时，分，秒，微秒）
+        <br>&gt;&gt;&gt; new_time = datetime.datetime.now()
+        <br>&gt;&gt;&gt; new_time.time()
+        <br>datetime.time(8, 38, 24, 280548)
+        <br>
+        <br>3：将时间转换成（年，月，日）
+        <br>&gt;&gt;&gt; now_time = datetime.datetime.now()
+        <br>&gt;&gt;&gt; now_time.date()
+        <br>datetime.date(2020, 10, 28)
+        <br>
+        <br>4：时间的加减计算：
+        <br># 时间点-时间间隔 = 时间点
+        <br>&gt;&gt;&gt; import datetime
+        <br>&gt;&gt;&gt; now_time = datetime.datetime.now()
+        <br>&gt;&gt;&gt; now_time
+        <br>datetime.datetime(2020, 10, 28, 8, 47, 30, 232944)
+        <br>&gt;&gt;&gt; day_3_ago = now_time - datetime.timedelta(days = 3)
+        <br>&gt;&gt;&gt; day_3_ago
+        <br>datetime.datetime(2020, 10, 25, 8, 47, 30, 232944)
+        <br>
+        <br>5：格式化日期转换成datetime对象：
+        <br>&gt;&gt;&gt; datetime.datetime.strptime('2017-3-22 15:25','%Y-%m-%d %H:%M')
+        <br>datetime.datetime(2017, 3, 22, 15, 25)
+        <br>
+        <br>八：date的常用用法：
+        <br>1： date对象获取年月日：
+        <br>&gt;&gt;&gt; date_today = datetime.date.today()
+        <br>&gt;&gt;&gt; date_today
+        <br>datetime.date(2020, 10, 28)
+        <br>&gt;&gt;&gt; date_today.year
+        <br>2020
+        <br>&gt;&gt;&gt; date_today.month
+        <br>10
+        <br>&gt;&gt;&gt; date_today.day
+        <br>28
+        <br>
+        <br>2：日期比较大小
+        <br>&gt;&gt;&gt; a = datetime.date(2020, 10, 28)
+        <br>&gt;&gt;&gt; b = datetime.date(2020, 10, 27)
+        <br>&gt;&gt;&gt; a.__eq__(b) &nbsp;# 相等
+        <br>False
+        <br>&gt;&gt;&gt; a.__gt__(b) &nbsp;# 大于
+        <br>True
+        <br>&gt;&gt;&gt; a.__lt__(b) &nbsp; # 小于
+        <br>False
+        <br>&gt;&gt;&gt; a.__le__(b) &nbsp;# 小于等于
+        <br>False
+        <br>&gt;&gt;&gt; a.__lt__(b) &nbsp; # 大于等于
+        <br>False
+        <br>&gt;&gt;&gt; a.__ne__(b) &nbsp; # 不等于
+        <br>True
+        <br>
+        <br>3：replace替换：
+        <br>&gt;&gt;&gt; today_date = datetime.date.today()
+        <br>&gt;&gt;&gt; today_date
+        <br>datetime.date(2020, 10, 28)
+        <br>&gt;&gt;&gt; today_date = today_date.replace(year = today_date.year, month
+        = today_date.month, day = 3)
+        <br>&gt;&gt;&gt; today_date
+        <br>datetime.date(2020, 10, 3)
+        <br>
+        <br>九：Django的时区转换：
+        <br>1： astimezone的使用：将一个时间对象（datetime）转换成UTC时间对象（datetime）</p>
+      <p>import datetime
+        <br>import pytz
+        <br>utc = pytz.timezone('UTC')
+        <br>now_time = datetime.datetime.now()
+        <br>utc_time = now_time.astimezone(tz=utc)</p>
+      <p><span style="background-color:rgb(250,250,250);color:rgb(166,38,164);">now = now_time.replace(tzinfo=pytz.timezone('UTC'))</span>
+        <br>print(now_time,utc_time)
+        <br>&nbsp;</p>
+      <p><strong>我们可以借助pytz模块，将一个offset-naive类型的时间对象转换为一个offset-aware类型的时间对象。</strong>
+      </p>
+      <p><strong>先安装pytz模块：</strong>
+      </p>
+      <p><strong>pip install pytz</strong>
+        <br><strong>来测试一下：</strong>
+      </p>
+      <p><strong>&gt;&gt;&gt; import pytz</strong>
+        <br><strong>&gt;&gt;&gt; now = now.replace(tzinfo=pytz.timezone('UTC'))</strong>
+        <br><strong>&gt;&gt;&gt; now</strong>
+        <br><strong>datetime.datetime(2020, 5, 26, 18, 36, 59, 811729, tzinfo=&lt;UTC&gt;)</strong>
+        <br><strong>&gt;&gt;&gt; now.tzinfo</strong>
+        <br><strong>&lt;UTC&gt;</strong>
+        <br><strong>反过来，也可以将一个offset-aware型转换为offset-naive型：</strong>
+      </p>
+      <p><strong>&gt;&gt;&gt; now = now.replace(tzinfo=None)</strong>
+        <br><strong>&gt;&gt;&gt; now</strong>
+        <br><strong>datetime.datetime(2020, 5, 26, 18, 36, 59, 811729)</strong>
+        <br><strong>&gt;&gt;&gt; now.tzinfo == None</strong>
+      </p>
+      <p>&nbsp;</p>
+      <p><i>make_aware() 和 make_naive()</i>
+        <br><i>make_aware()：返回一个本地化的时间，根据 TIME_ZONE 参数。</i>
+        <br><i>make_naive()：返回一个不带时区的时间，根据 TIME_ZONE 的值作为时间，否则就是当前时区。</i>
+      </p>
+      <p><i>&gt;&gt;&gt; from django.utils import timezone</i>
+        <br><i>&gt;&gt;&gt; now = timezone.now()</i>
+        <br><i>&gt;&gt;&gt; timezone.is_aware(now) &nbsp;// 判断是否带时区</i>
+        <br><i>True</i>
+        <br><i>&gt;&gt;&gt; now</i>
+        <br><i>datetime.datetime(2021, 11, 11, 8, 51, 26, 327845, tzinfo=&lt;UTC&gt;)</i>
+        <br><i>&gt;&gt;&gt; timezone.make_naive(now) &nbsp;// 去除时区，根据 tzinfo 中的时区属性使用 pytz 进行时区定义&nbsp;</i>
+        <br><i>datetime.datetime(2021, 11, 11, 16, 51, 26, 327845)</i>
+        <br><i>&gt;&gt;&gt; sh = timezone.make_naive(now)</i>
+        <br><i>&gt;&gt;&gt; sh</i>
+        <br><i>datetime.datetime(2021, 11, 11, 16, 51, 26, 327845)</i>
+        <br><i>&gt;&gt;&gt; t = timezone.make_aware(sh) &nbsp;// 增加时区，转换成设置的 TIME_ZONE 时区的时间</i>
+        <br><i>&gt;&gt;&gt; t</i>
+        <br><i>datetime.datetime(2021, 11, 11, 16, 51, 26, 327845, tzinfo=&lt;DstTzInfo 'Asia/Shanghai' CST+8:00:00 STD&gt;)</i>
+        <br>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>
+        <br>2: pytz.timezone(‘时区名’)：此方法能获取一个tzinfo对象，该对象可在datetime生成时间中以参数的形式放入，即可生成对应时区的时间。</p>
+      <p>&gt;&gt;&gt;utc = pytz.timezone('UTC')
+        <br>&gt;&gt;&gt;datetime.datetime.now(tz=utc)
+        <br>2019-05-10 10:53:46.000929+00:00
+        <br>
+        <br>实际的时间是:18：53：46
+        <br>&nbsp;</p>
+  </body>
+
+</html>

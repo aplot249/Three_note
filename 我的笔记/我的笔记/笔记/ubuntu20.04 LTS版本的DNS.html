@@ -1,0 +1,25 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body class="ck-content">
+     <h1>ubuntu20.04 LTS版本的DNS</h1>
+
+    <p style="margin-left:auto;">首先修改<code> /etc/systemd/resolved.conf</code> 文件，在其中添加dns信息，例如：</p>
+    <p style="margin-left:auto;"><code>DNS=8.8.8.8 114.114.114.114</code>
+      <br>然后退出保存。</p>
+    <p style="margin-left:auto;">然后以root身份在ubuntu终端中依次执行如下命令：</p>
+    <p style="margin-left:auto;"><code>systemctl restart systemd-resolved</code>
+      <br><code>systemctl enable systemd-resolved</code>
+      <br>
+      <br><code>mv /etc/resolv.conf /etc/resolv.conf.bak</code>
+      <br><code>ln -s /run/systemd/resolve/resolv.conf /etc/</code>
+      <br>再查看/etc/resolv.conf文件就可以看到新的dns信息已经写入其中了。</p>
+  </body>
+
+</html>

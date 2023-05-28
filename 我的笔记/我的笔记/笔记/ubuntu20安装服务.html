@@ -1,0 +1,96 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body class="ck-content">
+     <h1>ubuntu20安装服务</h1>
+
+    
+<h2 style="margin-left:0px;"><strong>安装 golang &gt;= 1.16 和 nodejs &gt;= 14.x</strong></h2>
+    <ol>
+      <li><code>wget https://deb.nodesource.com/setup_16.x</code> 数字16可以更改为其他版本号</li>
+      <li><code>bash setup_16.x &amp;&amp; apt update &amp;&amp; apt install nodejs -y</code> 进行安装</li>
+      <li><code>add-apt-repository ppa:longsleep/golang-backports</code> 添加go的ppa源</li>
+      <li><code>apt install golang-go -y</code>
+      </li>
+    </ol>
+    <p><span class="text-huge"><strong>go另外安装教程</strong></span>
+      <br>
+      <br><code>* 进入网站 &nbsp;https://golang.google.cn/dl/ ，找到go语言安装包</code>
+      <br><code>* 在ubuntu上执行 ` wget https://golang.google.cn/dl/go1.18.1.linux-amd64.tar.gz ` 拉去安装包</code>
+      <br><code>* 对安装包进行解压 ` tar -xzvf go1.18.1.linux-amd64.tar.gz`</code>
+      <br><code>* 解压后复制 `mv go /usr/local/`</code>
+      <br><code>* 修改.bashrc文件 vim bashrc</code>
+      <br><code>&nbsp; &nbsp; export GOROOT=/usr/local/go &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# 安装目录。</code>
+      <br><code>&nbsp; &nbsp; export GOPATH=$HOME/go &nbsp; &nbsp; # 工作环境</code>
+      <br><code>&nbsp; &nbsp; export GOBIN=$GOPATH/bin &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # 可执行文件存放</code>
+      <br><code>&nbsp; &nbsp; export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH &nbsp; &nbsp; &nbsp; # 添加PATH路径</code>
+    </p>
+    <p><code>配置生效 source .bashrc</code>
+    </p>
+    <h2 style="margin-left:0px;"><strong>卸载 nodejs</strong></h2>
+    <ol>
+      <li><code>apt remove nodejs</code> 只会卸载 nodejs，但是会保留配置文件，方便以后再次安装 nodejs</li>
+      <li><code>apt purge nodejs</code> 如果不想保留配置文件，这将会卸载 nodejs 和其相关的配置文件。</li>
+      <li><code>apt autoremove</code> 移除和 nodejs 一起安装但是现在没有被使用的包</li>
+    </ol>
+    <h2 style="margin-left:0px;"><strong>安装certbot</strong></h2>
+    <ol>
+      <li>pip3 install certbot</li>
+    </ol>
+    <p style="margin-left:0px;"><span class="text-huge"><strong>安装mariadb</strong></span>
+    </p>
+    <ol>
+      <li><code>安装 apt install mariadb-server</code>
+      </li>
+      <li><code>重启一下 service mysql restart</code>
+      </li>
+      <li><code>mysql_secure_installation</code>
+      </li>
+      <li><code>更改登录方式</code>
+        <br><code>UPDATE mysql.user SET authentication_string = PASSWORD('mypassword'), plugin = 'mysql_native_password' WHERE User = 'root' AND Host = 'localhost';</code>
+      </li>
+      <li><code>刷新权限 flush privileges;</code>
+      </li>
+      <li><code>退出重新登录</code>
+      </li>
+      <li><code>创建数据库 create database if not exists 数据库名 charset utf8 collate utf8_general_ci;</code>
+      </li>
+    </ol>
+    <h3 style="margin-left:0px;"><strong>解决MariaDB无密码 可登录</strong></h3>
+    <p style="margin-left:0px;"><code>官方对此的解释为：</code><a href="https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/"><code>https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/</code></a>
+      <br><code>即通过系统认出是root直接认证，但是如果想换成必须用密码就需要改了这个模式</code>
+    </p>
+    <p style="margin-left:0px;"><code>查看当前的认证状态：</code>
+      <br><code>select user, plugin from user;</code>
+      <br><code>结果如果为 unix_socket 就需要修改模式</code>
+      <br><code>按照官网的说明修改就行</code>
+      <br><code>ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;</code>
+      <br><code>这样可以修改模式为 mysql_native_password</code>
+    </p>
+    <p style="margin-left:0px;"><code>查看修改后的状态：</code>
+      <br><code>修改成功后发现还是可以通过mysql 或者mysql -uroot命令直接登录</code>
+      <br><code>这里的坑就是，需要重新设置一下密码。即使你是从 mysql_native_password 模式变为mysql_native_password模式，也需要设置一下</code>
+    </p>
+    <p style="margin-left:0px;"><code>重设密码：</code>
+      <br><code>ALTER USER root@localhost IDENTIFIED BY 'yourpassword';</code>
+      <br><code>其中以上的 root 代表用户 localhost代表可访问的地址，根据自己的情况修改即可</code>
+    </p>
+    <h3 style="margin-left:0px;"><strong>Mariadb 设置远程访问</strong></h3>
+    <ol>
+      <li><code>添加远程访问账户 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'passwd';</code>
+      </li>
+      <li><code>修改配置文件，将配置文件中bind-address = 127.0.0.1加# 注释掉，或者修改其绑定的ip地址。</code>
+      </li>
+      <li><code>重启mysql程序</code>
+      </li>
+    </ol>
+    <p>&nbsp;</p>
+  </body>
+
+</html>

@@ -1,0 +1,57 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body class="ck-content">
+     <h1>vue</h1>
+
+    <p>vue生命周期函数，8个：
+      <br>beforeCreate：实例创建后执行的第一个函数，data、computed、watch 的属性和方法 都不能被访问和使用
+      <br>Created：在此时可以使用数据、更改数据、对数据的更改，不会出发update函数，不可以对dom操作，如果要操作使用nexttick方法
+      <br>beforeMount：挂载之前、虚拟dom创建完成，即将开始渲染。对数据更改，不会出发update函数
+      <br>Mounted：挂载之后，真实dom创建完成，数据完成双向绑定，可以操作dom，使用ref操作dom元素
+      <br>beforeUpdate：发生在响应式数据更新之前，在此处可以操作数据，不会造成重新渲染。
+      <br>updated
+      <br>beforeDestory：在实例销毁之前执行，进行收尾工作，清除计时器。
+      <br>destoryed：实例销毁之后，只剩下dom空壳，组件、子实例、统统都已销毁。
+      <br>actived&nbsp;
+      <br>deactived</p>
+    <p>为什么data必须是个函数？
+      <br>同一个组件，不同实例 不互相影响。</p>
+    <p>组件通信方式：
+      <br>父子组件通信props、emits、通过 $parent、$children 获取组件
+      <br>兄弟组件通过event Bus进行通信</p>
+    <p>跨级组件通信，通过provide、inject 通信</p>
+    <p>vuex状态管理</p>
+    <p>slot是什么？
+      <br>slot是子组件模板的标记元素，这个元素是否显示以及如何显示 是由父组件决定。
+      <br>slot默认插槽，也叫匿名插槽，没有name属性，一个组件里面只能有一个匿名插槽，也就是默认插槽。
+      <br>具名插槽，具有name属性的slot，一个组件可具有多个。</p>
+    <p>Virtual DOM：
+      <br>虚拟dom的作用是每一次响应式数据发生变化，引起页面重新渲染时，比较前后两次虚拟dom，找出尽可能更新少的更新真是dom，
+      <br>从而达到性能提升。</p>
+    <p>vuex 状态仓库：
+      <br>存储管理应用的所有组件的状态，可以理解成一个全局仓库</p>
+    <p>v-if和v-show：
+      <br>v-show元素总是被渲染，只是进行css层面上的切换显示和隐藏。
+      <br>v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。
+      <br>如果需要非常频繁地切换，则使用 v-show 较好；
+      <br>如果在运行时条件不太可能改变，则使用 v-if 较好。</p>
+    <p>父组件、子组件
+      <br>父组件获取子组件$children,$refs
+      <br>子组件获取父组件$on</p>
+    <p>vue-router有哪几种导航钩子？
+      <br>全局导航、单个路由级别的导航、单个组件级别的导航。</p>
+    <p>vuex属性：
+      <br>有state、getter、mutation、action、module</p>
+    <p>$route和$router的区别
+      <br>前者是路由信息对象，是关于这条路由的相关信息的，比如该条路由的query,params,path,fullpath
+      <br>后者是关于路由实例信息的，有路由跳转的方法</p>
+  </body>
+
+</html>
