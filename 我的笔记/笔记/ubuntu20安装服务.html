@@ -52,45 +52,51 @@
       </li>
       <li><code>mysql_secure_installation</code>
       </li>
-      <li><code>更改登录方式</code>
-        <br><code>UPDATE mysql.user SET authentication_string = PASSWORD('mypassword'), plugin = 'mysql_native_password' WHERE User = 'root' AND Host = 'localhost';</code>
-      </li>
-      <li><code>刷新权限 flush privileges;</code>
-      </li>
-      <li><code>退出重新登录</code>
-      </li>
-      <li><code>创建数据库 create database if not exists 数据库名 charset utf8 collate utf8_general_ci;</code>
+      <li><code><s>更改登录方式</s></code>
+        <br><code><s>UPDATE mysql.user SET authentication_string = PASSWORD('mypassword'), plugin = 'mysql_native_password' WHERE User = 'root' AND Host = 'localhost';</s></code>
       </li>
     </ol>
-    <h3 style="margin-left:0px;"><strong>解决MariaDB无密码 可登录</strong></h3>
-    <p style="margin-left:0px;"><code>官方对此的解释为：</code><a href="https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/"><code>https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/</code></a>
-      <br><code>即通过系统认出是root直接认证，但是如果想换成必须用密码就需要改了这个模式</code>
-    </p>
-    <p style="margin-left:0px;"><code>查看当前的认证状态：</code>
-      <br><code>select user, plugin from user;</code>
-      <br><code>结果如果为 unix_socket 就需要修改模式</code>
-      <br><code>按照官网的说明修改就行</code>
-      <br><code>ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;</code>
-      <br><code>这样可以修改模式为 mysql_native_password</code>
-    </p>
-    <p style="margin-left:0px;"><code>查看修改后的状态：</code>
-      <br><code>修改成功后发现还是可以通过mysql 或者mysql -uroot命令直接登录</code>
-      <br><code>这里的坑就是，需要重新设置一下密码。即使你是从 mysql_native_password 模式变为mysql_native_password模式，也需要设置一下</code>
-    </p>
-    <p style="margin-left:0px;"><code>重设密码：</code>
-      <br><code>ALTER USER root@localhost IDENTIFIED BY 'yourpassword';</code>
-      <br><code>其中以上的 root 代表用户 localhost代表可访问的地址，根据自己的情况修改即可</code>
-    </p>
-    <h3 style="margin-left:0px;"><strong>Mariadb 设置远程访问</strong></h3>
-    <ol>
-      <li><code>添加远程访问账户 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'passwd';</code>
-      </li>
-      <li><code>修改配置文件，将配置文件中bind-address = 127.0.0.1加# 注释掉，或者修改其绑定的ip地址。</code>
-      </li>
-      <li><code>重启mysql程序</code>
-      </li>
-    </ol>
-    <p>&nbsp;</p>
+    <p style="margin-left:0px;">mysql.user 表目前已不起作用了，真正的表是 mysql.global_priv 表，查询后我们发现root用户是unix_socker类型，这就解释了为啥总能直接登陆的问题</p>
+    <p
+    style="margin-left:0px;">root用户默认是unix_socker类型</p>
+      <p style="margin-left:0px;">而解决方法很简单，只要输入如下命令即可。</p><pre><code class="language-text-plain">ALTER USER root@localhost IDENTIFIED VIA mysql_native_password USING PASSWORD("your_root_pass")</code></pre>
+      <ol>
+        <li><code>刷新权限 flush privileges;</code>
+        </li>
+        <li><code>退出重新登录</code>
+        </li>
+        <li><code>创建数据库 create database if not exists 数据库名 charset utf8 collate utf8_general_ci;</code>
+        </li>
+      </ol>
+      <h3 style="margin-left:0px;"><strong>解决MariaDB无密码 可登录</strong></h3>
+      <p style="margin-left:0px;"><code>官方对此的解释为：</code><a href="https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/"><code>https://mariadb.com/kb/en/library/authentication-plugin-unix-socket/</code></a>
+        <br><code>即通过系统认出是root直接认证，但是如果想换成必须用密码就需要改了这个模式</code>
+      </p>
+      <p style="margin-left:0px;"><code>查看当前的认证状态：</code>
+        <br><code>select user, plugin from user;</code>
+        <br><code>结果如果为 unix_socket 就需要修改模式</code>
+        <br><code>按照官网的说明修改就行</code>
+        <br><code>ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;</code>
+        <br><code>这样可以修改模式为 mysql_native_password</code>
+      </p>
+      <p style="margin-left:0px;"><code>查看修改后的状态：</code>
+        <br><code>修改成功后发现还是可以通过mysql 或者mysql -uroot命令直接登录</code>
+        <br><code>这里的坑就是，需要重新设置一下密码。即使你是从 mysql_native_password 模式变为mysql_native_password模式，也需要设置一下</code>
+      </p>
+      <p style="margin-left:0px;"><code>重设密码：</code>
+        <br><code>ALTER USER root@localhost IDENTIFIED BY 'yourpassword';</code>
+        <br><code>其中以上的 root 代表用户 localhost代表可访问的地址，根据自己的情况修改即可</code>
+      </p>
+      <h3 style="margin-left:0px;"><strong>Mariadb 设置远程访问</strong></h3>
+      <ol>
+        <li><code>添加远程访问账户 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'passwd';</code>
+        </li>
+        <li><code>修改配置文件，将配置文件中bind-address = 127.0.0.1加# 注释掉，或者修改其绑定的ip地址。</code>
+        </li>
+        <li><code>重启mysql程序</code>
+        </li>
+      </ol>
+      <p>&nbsp;</p>
   </body>
 
 </html>
